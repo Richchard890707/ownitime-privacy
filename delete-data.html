@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OwnITime 刪除資料說明</title>
+<style>
+  :root {
+    --bg: #ffffff; --ink: #16202a; --dim: #5a6b7a; --line: #e2e8ee;
+    --cyan: #00867e; --card: #f5f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a1119; --ink: #e8f2f5; --dim: #9fb2be; --line: #1e2b36;
+      --cyan: #00d2c8; --card: #0f1a24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px 80px;
+    background: var(--bg); color: var(--ink);
+    font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Noto Sans TC",
+          "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 28px; letter-spacing: 1px; margin: 0 0 6px; }
+  h2 { font-size: 20px; margin: 42px 0 12px; padding-top: 20px;
+       border-top: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 26px 0 8px; color: var(--cyan); }
+  .updated { color: var(--dim); font-size: 14px; margin-bottom: 8px; }
+  .lead { background: var(--card); border: 1px solid var(--line);
+          border-radius: 12px; padding: 16px 18px; margin: 24px 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--cyan); }
+  code { background: var(--card); padding: 1px 5px; border-radius: 4px;
+         font-size: 0.9em; }
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left;
+           vertical-align: top; }
+  th { background: var(--card); font-weight: 600; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 14px; }
+</style></head>
+<body>
+<main>
+
+<h1>OwnITime 刪除資料說明</h1>
+<p class="updated">最後更新:2026-08-18</p>
+
+<div class="lead">
+  本頁說明如何要求刪除 <strong>OwnITime</strong>(開發者:OwnITime)所保存的
+  使用者資料。你可以<strong>自行在 App 內完成</strong>,不需要聯絡我們;
+  若無法操作,也可以來信由我們代為處理。
+</div>
+
+<h2>方式一:刪除部分資料(保留帳號)</h2>
+
+<p>你可以只刪除某些內容,帳號與其他資料會保留。</p>
+
+<ol>
+  <li>開啟 OwnITime</li>
+  <li>找到你要刪除的項目(鬧鐘、行事曆事件、待辦、經期紀錄、訓練紀錄)</li>
+  <li>長按該項目 → 選擇「刪除」,或在編輯頁按刪除</li>
+</ol>
+
+<p>刪除後,該項目的<strong>標題與備註等內容會立即從裝置上清除</strong>;
+若你已登入,系統會在下次同步時<strong>一併清除雲端保存的內容</strong>。</p>
+
+<h2>方式二:刪除帳號與所有資料</h2>
+
+<ol>
+  <li>開啟 OwnITime</li>
+  <li>進入「設定」</li>
+  <li>選擇「帳號與同步」→「<strong>刪除帳號</strong>」</li>
+  <li>閱讀確認畫面後,按「永久刪除」</li>
+</ol>
+
+<h2>會刪除哪些資料</h2>
+
+<p>執行「刪除帳號」後,以下資料會被刪除:</p>
+
+<ul>
+  <li>雲端資料庫(Firebase Firestore)中你的所有提醒、待辦、行事曆事件與經期紀錄</li>
+  <li>本 App 建立在你 Google 雲端硬碟中的備份檔</li>
+  <li>本機裝置上的全部資料</li>
+  <li>你的登入身分(Firebase 驗證帳號)</li>
+</ul>
+
+<h2>會保留哪些資料、保留多久</h2>
+
+<div class="tablewrap">
+<table>
+  <tr><th>資料</th><th>保留期限</th><th>說明</th></tr>
+  <tr>
+    <td>刪除項目的識別碼與刪除時間</td>
+    <td>直到你刪除帳號為止</td>
+    <td>用來讓你其他裝置知道這筆已被刪除,避免同步時又被還原。
+        <strong>不含標題、備註等內容</strong>。</td>
+  </tr>
+  <tr>
+    <td>雲端服務供應商的系統備份</td>
+    <td>最多 <strong>30 天</strong></td>
+    <td>Google Firebase 的例行備份機制,期滿自動覆寫,我們無法個別存取。</td>
+  </tr>
+</table>
+</div>
+
+<p>除上述之外,<strong>我們不保留任何其他資料</strong>。
+OwnITime 沒有廣告、沒有分析追蹤,也不會把你的資料賣給或分享給第三方。</p>
+
+<h2>若你已經移除 App</h2>
+
+<p>移除 App 前若沒有先刪除帳號,雲端資料仍會保留。你可以:</p>
+
+<ul>
+  <li>重新安裝 App、登入原本的 Google 帳號,再依上方步驟刪除帳號;或</li>
+  <li>寄信到 <a href="mailto:ownitime@gmail.com">ownitime@gmail.com</a>,
+      主旨寫「刪除資料」,並註明你使用的 Google 帳號電子郵件地址。
+      我們會在收到後 <strong>30 天內</strong>完成刪除並回信確認。</li>
+</ul>
+
+<h2>相關連結</h2>
+<p><a href="./">OwnITime 隱私權政策</a></p>
+
+<footer>
+  聯絡我們:<a href="mailto:ownitime@gmail.com">ownitime@gmail.com</a>
+</footer>
+
+</main>
+</body>
+</html>

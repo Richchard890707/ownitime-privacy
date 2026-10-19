@@ -49,7 +49,7 @@
 <main>
 
 <h1>OwnITime 隱私權政策</h1>
-<p class="updated">最後更新:2026 年 8 月 8 日</p>
+<p class="updated">最後更新:2026 年 10 月 19 日</p>
 
 <div class="lead">
   <strong>你的資料主要存在你自己的手機裡。</strong>
@@ -81,18 +81,42 @@
    用途只有一個:讓你的資料能在你自己的裝置之間同步與備份。</p>
 
 <h3>3. 語音</h3>
-<p>當你使用「用說的新增」功能時,本 App 會錄下你當下講的話,並送到
-   <strong>Google 的語音辨識服務</strong>轉成文字。</p>
+<p>當你使用「用說的新增」功能時,本 App 會錄下你當下講的話,交給手機系統的語音辨識服務
+   轉成文字:<strong>Android 是 Google 的語音辨識,iPhone 是 Apple 的語音辨識</strong>。</p>
 <ul>
   <li>只有在你<strong>主動按下語音按鈕</strong>時才會錄音。本 App
       <strong>不會</strong>在背景聆聽。</li>
   <li>錄音<strong>不會</strong>被本 App 儲存,轉成文字後音訊就被丟棄。</li>
-  <li>若裝置沒有網路,本 App 會改用<strong>裝置內建的離線辨識</strong>,
+  <li>辨識可能在網路上的語音服務完成;若裝置沒有網路,會改用<strong>裝置內建的離線辨識</strong>,
       音訊不會離開手機。</li>
 </ul>
 
-<h3>4. 行事曆</h3>
-<p><strong>本版本不存取你的 Google 日曆。</strong>登入時不會要求任何日曆權限。</p>
+<h3>4. 共用行事曆(選用)</h3>
+<p>你可以把<strong>自己的行程</strong>分享給家人、同事、朋友或另一半看。這個功能要登入才能用,
+   而且只有你主動建立分享、並<strong>同意</strong>對方的加入申請之後,對方才看得到。</p>
+<ul>
+  <li><strong>會上傳到 Firebase 的內容</strong>:分享的名稱、你的顯示名稱、你選要分享的行程的
+      <strong>時間</strong>、是否全天、顏色;選「完整」時也包含<strong>行程標題</strong>。
+      選「只顯示忙碌」時<strong>不上傳標題</strong>,對方只看得到哪些時段有事。
+      備註、地點、清單等其他內容<strong>不會上傳</strong>。</li>
+  <li><strong>加入申請</strong>:對方用 QR 碼或邀請碼申請時,會留下他的顯示名稱,讓你決定要不要同意。</li>
+  <li><strong>誰看得到</strong>:只有你同意過的人。你可以隨時移除某個人,或刪除整個分享,
+      雲端上的分享內容會一起刪掉。</li>
+  <li>你看別人分享給你的行程,只存在你的手機上,不會再傳給其他人。</li>
+</ul>
+
+<h3>5. 相機與相片(選用)</h3>
+<p>健身的「做一張分享卡」可以拍一張照片當背景。照片<strong>只在手機上</strong>處理
+   (包含找出照片裡的人,讓字避開人臉),<strong>不會上傳</strong>。按「下載」時才會存進你的相簿。</p>
+
+<h3>6. 訂閱(付費版)</h3>
+<p>訂閱透過 <strong>Google Play</strong>(Android)處理。付款資料由 Google 處理,
+   <strong>本 App 拿不到你的信用卡或付款資訊</strong>,只向 Google Play 確認
+   「這個帳號有沒有有效的訂閱」。</p>
+
+<h3>7. Google 日曆</h3>
+<p><strong>本版本不存取你的 Google 日曆。</strong>登入時不會要求任何日曆權限。
+   你可以自己把 <code>.ics</code> 行事曆檔匯入本 App,檔案只在手機上讀取。</p>
 <p>(未來版本若加入此功能,我們會事先更新本政策並在 App 內告知。)</p>
 
 <h2>資料存在哪裡</h2>
@@ -106,6 +130,9 @@
   <tr><td><strong>Firebase(Google Cloud)</strong></td>
       <td>提醒、待辦、經期、動作提醒等</td>
       <td>僅在你登入後,用於跨裝置同步</td></tr>
+  <tr><td><strong>Firebase(Google Cloud)</strong></td>
+      <td>你分享出去的行程(見上方「共用行事曆」)</td>
+      <td>僅在你登入並建立分享後;只有你同意的人看得到</td></tr>
 </table>
 </div>
 <p>關於 Google Drive 備份:備份檔存在<strong>你自己的</strong> Google Drive
@@ -124,6 +151,7 @@
       Google Drive 的備份檔中。</li>
   <li><strong>我們不會將它用於任何其他目的</strong>,不分析、不彙總、
       不分享、不販售。</li>
+  <li><strong>經期紀錄不會出現在共用行事曆裡</strong>,分享的只有你的行程。</li>
   <li>你可以隨時刪除單筆紀錄,或透過「刪除帳號」一次刪除全部。</li>
 </ul>
 <p>若你不希望經期資料離開手機,<strong>不要登入</strong> ——
@@ -142,20 +170,22 @@
   <li><strong>目前沒有廣告</strong></li>
   <li><strong>目前沒有安裝任何分析、追蹤或行為剖析工具</strong></li>
 </ul>
-<p>本 App 未來可能加入廣告或訂閱制。若加入,我們會<strong>事先更新本頁,
-   並在 App 內明確告知</strong>;上面那四條長期承諾仍然有效。</p>
+<p>本 App 有訂閱制(見上方「訂閱」),訂閱不會改變上面任何一條。未來若加入廣告,
+   我們會<strong>事先更新本頁,並在 App 內明確告知</strong>;上面那四條長期承諾仍然有效。</p>
 
 <h2>第三方服務</h2>
-<p>本 App 使用下列 Google 服務。這些服務有各自的隱私權政策,
+<p>本 App 使用下列服務。這些服務有各自的隱私權政策,
    適用於它們處理的資料:</p>
 <div class="tablewrap">
 <table>
   <tr><th>服務</th><th>做什麼</th></tr>
   <tr><td>Google 登入</td><td>驗證你的身分(選用)</td></tr>
   <tr><td>Firebase Authentication</td><td>管理登入狀態(選用)</td></tr>
-  <tr><td>Cloud Firestore</td><td>跨裝置同步(選用)</td></tr>
+  <tr><td>Cloud Firestore</td><td>跨裝置同步、共用行事曆(選用)</td></tr>
   <tr><td>Google Drive API</td><td>把備份存進<strong>你自己的</strong> Drive(選用)</td></tr>
-  <tr><td>Google 語音辨識</td><td>把你的語音轉成文字(僅在你使用語音輸入時)</td></tr>
+  <tr><td>Google 語音辨識(Android)/ Apple 語音辨識(iPhone)</td><td>把你的語音轉成文字(僅在你使用語音輸入時)</td></tr>
+  <tr><td>Google Play 帳款服務</td><td>處理訂閱付款(僅在你訂閱時)</td></tr>
+  <tr><td>Google ML Kit(裝置內)</td><td>在手機上找出分享卡照片裡的人,照片不上傳</td></tr>
 </table>
 </div>
 <p>本 App 向 Google 要求的權限只有兩項:<strong>你的電子郵件地址</strong>,
@@ -178,7 +208,7 @@
 <p><strong>設定 → 帳號與同步 → 刪除帳號</strong></p>
 <p>這會永久刪除:</p>
 <ul>
-  <li>Firebase 上的全部資料</li>
+  <li>Firebase 上的全部資料(包含你建立的共用行事曆,以及你對別人的加入申請)</li>
   <li>Google Drive 裡由本 App 建立的全部備份</li>
   <li>這台裝置上的全部資料</li>
   <li>你的 Google 帳號在本 App 的登入身分</li>
@@ -198,7 +228,9 @@
   <tr><td>全螢幕通知</td><td>鬧鐘響時能蓋過鎖定畫面</td></tr>
   <tr><td>喚醒裝置 / 震動</td><td>鬧鐘響鈴</td></tr>
   <tr><td>開機自動啟動</td><td>重開機後重新排定你的鬧鐘</td></tr>
-  <tr><td>麥克風</td><td>僅在你使用語音輸入時</td></tr>
+  <tr><td>麥克風 / 語音辨識</td><td>僅在你使用語音輸入時</td></tr>
+  <tr><td>相機</td><td>掃描共用行事曆的 QR 碼、拍分享卡照片(僅在你使用時)</td></tr>
+  <tr><td>相片(僅加入)</td><td>把分享卡存進相簿(iPhone;僅在你按下載時)</td></tr>
   <tr><td>忽略電池最佳化</td><td>避免系統為了省電而讓鬧鐘不準(選用,你可以拒絕)</td></tr>
 </table>
 </div>
